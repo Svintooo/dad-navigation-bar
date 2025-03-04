@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Dad Navigation Bar
-// @namespace     https://github.com/Svintooo/
+// @namespace    https://github.com/Svintooo/
 // @version      2025-03-02
 // @description  Navigation Bar for my dad.
 // @author       Svintoo
@@ -14,7 +14,7 @@
 (function() {
     'use strict';
 
-    console.log('Sticky Navigation Bar script is starting...');
+    console.log('Dad Navigation Bar is starting...');
 
     // Create a div element for the navigation bar
     const navBar = document.createElement('div');
@@ -22,7 +22,7 @@
 
     // Button names and their corresponding icons
     const buttons = [
-        { name: 'back', icon: '➜', style: 'transform:scaleX(-1);' }, // Use emoji as icons for demonstration
+        { name: 'back', icon: '➜', style: 'transform:scaleX(-1);' }, // Use transform to flip the arrow
         { name: 'youtube', icon: '📺 YouTube', style: '' },
         { name: 'netflix', icon: '🎬 Filmer', style: '' },
         { name: 'pornhub', icon: '🔞 Porr', style: '' },
