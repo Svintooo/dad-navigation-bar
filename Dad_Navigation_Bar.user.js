@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Dad Navigation Bar
-// @namespace    https://github.com/Svintooo/
+// @namespace     https://github.com/Svintooo/
 // @version      2025-03-02
 // @description  Navigation Bar for my dad.
 // @author       Svintoo
@@ -14,7 +14,7 @@
 (function() {
     'use strict';
 
-    console.log('Dad Navigation Bar is starting...');
+    console.log('Sticky Navigation Bar script is starting...');
 
     // Create a div element for the navigation bar
     const navBar = document.createElement('div');
@@ -22,9 +22,9 @@
 
     // Button names and their corresponding icons
     const buttons = [
-        { name: 'back', icon: '➜', style: 'transform:scaleX(-1);' }, // Use transform to flip the arrow
+        { name: 'back', icon: '➜', style: 'transform:scaleX(-1);' }, // Use emoji as icons for demonstration
         { name: 'youtube', icon: '📺 YouTube', style: '' },
-        //{ name: 'netflix', icon: '🎬 Filmer', style: '' },
+        { name: 'netflix', icon: '🎬 Filmer', style: '' },
         { name: 'pornhub', icon: '🔞 Porr', style: '' },
         { name: 'forward', icon: '➜', style: '' }
     ];
@@ -94,4 +94,15 @@
         };
     `);
     console.log('CSS styles for the navigation bar have been applied.');
+
+    document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+            console.log('Entered fullscreen mode');
+            navBar.style = 'visibility: hidden;';
+        } else {
+            console.log('Exited fullscreen mode');
+            navBar.style = 'visibility: visible;';
+        }
+    });
+    console.log('EventListener for fullscreen for the navigation bar have been initiated.');
 })();
